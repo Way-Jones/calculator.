@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
     function updateInputFields() {
         inputFieldsDiv.innerHTML = ""; 
 
-        if (operation === "add" || operation === "subtract" || operation === "power") {
+        if (operation === "add" || operation === "subtract") {
             inputFieldsDiv.innerHTML = `
                 <input type="number" id="num1" placeholder="Number 1" required>
                 <input type="number" id="num2" placeholder="Number 2" required>
@@ -32,6 +32,11 @@ document.addEventListener("DOMContentLoaded", function() {
         } else if (operation === "factorial") {
             inputFieldsDiv.innerHTML = `
                 <input type="number" id="numFactorial" placeholder="Number" required>
+            `;
+        } else if (operation === "power") {
+            inputFieldsDiv.innerHTML = `
+                <input type="number" id="num1" placeholder="Number 1" required>
+                <input type="number" id="num2" placeholder="To the Power" required>
             `;
         }
     }
