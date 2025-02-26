@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator App</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to CSS for styling -->
+</head>
+<body>
+    <div class="calculator">
+        <h1>Calculator</h1>
+        <div class="display">
+            <input type="text" id="result-value" disabled>
+        </div>
+        <div class="buttons">
+            <button class="btn" data-operation="add">+</button>
+            <button class="btn" data-operation="subtract">-</button>
+            <button class="btn" data-operation="multiply">*</button>
+            <button class="btn" data-operation="divide">/</button>
+            <button class="btn" data-operation="sum">Sum</button>
+            <button class="btn" data-operation="power">^</button>
+            <button class="btn" data-operation="factorial">!</button>
+            <button class="btn" id="compute-btn">=</button>
+        </div>
+        <div class="input-fields" id="input-fields">
+            <input type="number" id="num1" placeholder="Number 1" required>
+            <input type="number" id="num2" placeholder="Number 2" required>
+        </div>
+    </div>
+
+    <script src="calculator.js"></script>
+    <script src="script.js"></script> <!-- Link to your JavaScript for interactivity -->
+</body>
+</html>
