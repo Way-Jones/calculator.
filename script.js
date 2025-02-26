@@ -18,14 +18,14 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     function updateInputFields() {
-        inputFieldsDiv.innerHTML = ""; // Clear previous input fields
+        inputFieldsDiv.innerHTML = ""; 
 
-        if (operation === "add" || operation === "subtract" || operation === "multiply" || operation === "divide" || operation === "power") {
+        if (operation === "add" || operation === "subtract" || operation === "power") {
             inputFieldsDiv.innerHTML = `
                 <input type="number" id="num1" placeholder="Number 1" required>
                 <input type="number" id="num2" placeholder="Number 2" required>
             `;
-        } else if (operation === "sum" || operation === "multiply") {
+        } else if (operation === "sum" || operation === "multiply" || operation === "divide") {
             inputFieldsDiv.innerHTML = `
                 <input type="text" id="numArray" placeholder="Enter numbers separated by commas" required>
             `;
@@ -60,7 +60,10 @@ document.addEventListener("DOMContentLoaded", function() {
         } else if (operation === "factorial") {
             const num = parseInt(document.getElementById("numFactorial").value);
             result = factorial(num);
-        }
+        } else if (operation === "divide"){
+            const numArray = document.getElementById("numArray").value.split(',').map(Number);
+            result = divide(numArray);
+        } 
 
         resultValue.value = result !== undefined ? result : "Invalid input";
     }

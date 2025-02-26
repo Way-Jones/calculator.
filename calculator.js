@@ -6,6 +6,10 @@ const subtract = function(a, b) {
     return a - b;
 };
 
+const divide = function(numbers) {
+    return numbers.reduce((acc, curr) => acc / curr)
+}
+
 const sum = function(numbers) {
     return numbers.reduce((acc, curr) => acc + curr, 0);
 };
